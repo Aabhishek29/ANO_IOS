@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = AppModel.shared
+    
     var body: some View {
-        Text("Ano")
+        GeometryReader { geo in
+            NavigationView {
+                ZStack{
+                    NavigationLink( destination: ChatListView(),isActive: $viewModel.isAuthenticated){
+                            EmptyView()
+                        }
+                    LoginView()
+                        .frame(height: geo.size.height)
+                }
+            }
+        }
     }
 }
 

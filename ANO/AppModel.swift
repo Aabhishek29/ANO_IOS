@@ -13,4 +13,6 @@ class AppModel : ObservableObject {
     static let shared = AppModel()
     
     @Published var username: String = ""
+    @Published var isAuthenticated: Bool = false
+    
 }

@@ -13,6 +13,7 @@ struct LoginView: View {
     
     func userLogin() {
         print("getting the credentials")
+        viewModel.isAuthenticated = true
     }
     
     var body: some View {
@@ -56,7 +57,7 @@ struct LoginView: View {
                                         .background(RoundedRectangle(cornerRadius: 4.0, style: .continuous)
                                             .stroke(Color(uiColor: UIColor(hex: "#5017d4ff") ?? .blue), lineWidth: 2.0))
                                         .padding([.leading],15)
-                                        .frame(width: geo.size.width*0.80)
+                                        .frame(width: geo.size.width*0.90)
                                 }.frame(width: geo.size.width,alignment: .leading)
                                     .padding()
                                 VStack(alignment: .leading) {
@@ -69,7 +70,7 @@ struct LoginView: View {
                                         .background(RoundedRectangle(cornerRadius: 4.0, style: .continuous)
                                             .stroke(Color(uiColor: UIColor(hex: "#5017d4ff") ?? .blue), lineWidth: 2.0))
                                         .padding([.leading],15)
-                                        .frame(width: geo.size.width*0.80)
+                                        .frame(width: geo.size.width*0.90)
                                 }.frame(width: geo.size.width,alignment: .leading)
                             }.frame(width: geo.size.width)
                                 .padding()

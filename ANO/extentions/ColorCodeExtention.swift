@@ -11,7 +11,6 @@ import UIKit
 extension UIColor {
     public convenience init?(hex: String) {
         let r, g, b, a: CGFloat
-        print("UIColor getting hexString value is \(hex)")
         if hex.hasPrefix("#") {
             let start = hex.index(hex.startIndex, offsetBy: 1)
             let hexColor = String(hex[start...])

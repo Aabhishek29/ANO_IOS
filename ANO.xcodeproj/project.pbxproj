@@ -20,6 +20,7 @@
 		129BCDF329FF93F200C7377D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129BCDF229FF93F200C7377D /* LoginView.swift */; };
 		129BCDF829FF94E800C7377D /* ColorCodeExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129BCDF729FF94E800C7377D /* ColorCodeExtention.swift */; };
 		129BCDFA29FF9D5700C7377D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129BCDF929FF9D5700C7377D /* AppModel.swift */; };
+		12AFD1D329FFD08A00231DFD /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AFD1D229FFD08A00231DFD /* ChatListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		129BCDF229FF93F200C7377D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		129BCDF729FF94E800C7377D /* ColorCodeExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCodeExtention.swift; sourceTree = "<group>"; };
 		129BCDF929FF9D5700C7377D /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		12AFD1D229FFD08A00231DFD /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				129BCDF029FF90CA00C7377D /* ContentView.swift */,
 				129BCDF229FF93F200C7377D /* LoginView.swift */,
 				129BCDF929FF9D5700C7377D /* AppModel.swift */,
+				12AFD1D229FFD08A00231DFD /* ChatListView.swift */,
 			);
 			path = ANO;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				129BCDC529FF900B00C7377D /* ViewController.swift in Sources */,
 				129BCDC129FF900B00C7377D /* AppDelegate.swift in Sources */,
 				129BCDF129FF90CA00C7377D /* ContentView.swift in Sources */,
+				12AFD1D329FFD08A00231DFD /* ChatListView.swift in Sources */,
 				129BCDF329FF93F200C7377D /* LoginView.swift in Sources */,
 				129BCDC329FF900B00C7377D /* SceneDelegate.swift in Sources */,
 				129BCDF829FF94E800C7377D /* ColorCodeExtention.swift in Sources */,
