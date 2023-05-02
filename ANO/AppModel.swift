@@ -14,5 +14,5 @@ class AppModel : ObservableObject {
     
     @Published var username: String = ""
     @Published var isAuthenticated: Bool = false
-    
+    @Published var navigateToSignUp: Bool = false
 }

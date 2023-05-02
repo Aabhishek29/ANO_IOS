@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		128864892A00FAF100C24657 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128864882A00FAF100C24657 /* StoryView.swift */; };
+		1288648C2A00FD9900C24657 /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288648B2A00FD9900C24657 /* CallView.swift */; };
+		1288648E2A00FDB400C24657 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288648D2A00FDB400C24657 /* HomeView.swift */; };
+		128864902A0101E200C24657 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288648F2A0101E200C24657 /* SignUpView.swift */; };
 		129BCDC129FF900B00C7377D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129BCDC029FF900B00C7377D /* AppDelegate.swift */; };
 		129BCDC329FF900B00C7377D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129BCDC229FF900B00C7377D /* SceneDelegate.swift */; };
 		129BCDC529FF900B00C7377D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129BCDC429FF900B00C7377D /* ViewController.swift */; };
@@ -21,6 +25,7 @@
 		129BCDF829FF94E800C7377D /* ColorCodeExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129BCDF729FF94E800C7377D /* ColorCodeExtention.swift */; };
 		129BCDFA29FF9D5700C7377D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129BCDF929FF9D5700C7377D /* AppModel.swift */; };
 		12AFD1D329FFD08A00231DFD /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AFD1D229FFD08A00231DFD /* ChatListView.swift */; };
+		12AFD1D529FFE5FA00231DFD /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AFD1D429FFE5FA00231DFD /* ChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		128864882A00FAF100C24657 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		1288648B2A00FD9900C24657 /* CallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
+		1288648D2A00FDB400C24657 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1288648F2A0101E200C24657 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		128864912A01397100C24657 /* Users.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Users.geojson; sourceTree = "<group>"; };
 		129BCDBD29FF900B00C7377D /* ANO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ANO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		129BCDC029FF900B00C7377D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		129BCDC229FF900B00C7377D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +69,7 @@
 		129BCDF729FF94E800C7377D /* ColorCodeExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCodeExtention.swift; sourceTree = "<group>"; };
 		129BCDF929FF9D5700C7377D /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		12AFD1D229FFD08A00231DFD /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
+		12AFD1D429FFE5FA00231DFD /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +97,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		128864872A00E1D900C24657 /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				1288648A2A00FB1300C24657 /* subComponents */,
+				12AFD1D229FFD08A00231DFD /* ChatListView.swift */,
+				128864882A00FAF100C24657 /* StoryView.swift */,
+				1288648B2A00FD9900C24657 /* CallView.swift */,
+				1288648F2A0101E200C24657 /* SignUpView.swift */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
+		1288648A2A00FB1300C24657 /* subComponents */ = {
+			isa = PBXGroup;
+			children = (
+				12AFD1D429FFE5FA00231DFD /* ChatView.swift */,
+			);
+			path = subComponents;
+			sourceTree = "<group>";
+		};
 		129BCDB429FF900B00C7377D = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +140,7 @@
 		129BCDBF29FF900B00C7377D /* ANO */ = {
 			isa = PBXGroup;
 			children = (
+				128864872A00E1D900C24657 /* TabViews */,
 				129BCDF629FF94D100C7377D /* extentions */,
 				129BCDC029FF900B00C7377D /* AppDelegate.swift */,
 				129BCDC229FF900B00C7377D /* SceneDelegate.swift */,
@@ -120,7 +152,8 @@
 				129BCDF029FF90CA00C7377D /* ContentView.swift */,
 				129BCDF229FF93F200C7377D /* LoginView.swift */,
 				129BCDF929FF9D5700C7377D /* AppModel.swift */,
-				12AFD1D229FFD08A00231DFD /* ChatListView.swift */,
+				1288648D2A00FDB400C24657 /* HomeView.swift */,
+				128864912A01397100C24657 /* Users.geojson */,
 			);
 			path = ANO;
 			sourceTree = "<group>";
@@ -281,12 +314,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				128864892A00FAF100C24657 /* StoryView.swift in Sources */,
 				129BCDFA29FF9D5700C7377D /* AppModel.swift in Sources */,
 				129BCDC529FF900B00C7377D /* ViewController.swift in Sources */,
 				129BCDC129FF900B00C7377D /* AppDelegate.swift in Sources */,
 				129BCDF129FF90CA00C7377D /* ContentView.swift in Sources */,
+				12AFD1D529FFE5FA00231DFD /* ChatView.swift in Sources */,
 				12AFD1D329FFD08A00231DFD /* ChatListView.swift in Sources */,
+				1288648C2A00FD9900C24657 /* CallView.swift in Sources */,
+				128864902A0101E200C24657 /* SignUpView.swift in Sources */,
 				129BCDF329FF93F200C7377D /* LoginView.swift in Sources */,
+				1288648E2A00FDB400C24657 /* HomeView.swift in Sources */,
 				129BCDC329FF900B00C7377D /* SceneDelegate.swift in Sources */,
 				129BCDF829FF94E800C7377D /* ColorCodeExtention.swift in Sources */,
 			);

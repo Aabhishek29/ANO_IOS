@@ -10,7 +10,6 @@ import SwiftUI
 struct LoginView: View {
     @ObservedObject var viewModel = AppModel.shared
     
-    
     func userLogin() {
         print("getting the credentials")
         viewModel.isAuthenticated = true
@@ -74,6 +73,7 @@ struct LoginView: View {
                                 }.frame(width: geo.size.width,alignment: .leading)
                             }.frame(width: geo.size.width)
                                 .padding()
+                            Link("Forget Password?", destination: URL(string: "https://aabhishek.vercel.app")!)
                             Button(action: userLogin) {
                                 Rectangle()
                                     .foregroundColor(Color(uiColor: UIColor(hex: "#5017d4ff") ?? .blue))
@@ -86,6 +86,11 @@ struct LoginView: View {
                                     .cornerRadius(50)
                                     .shadow(radius: 15)
                             }.padding()
+                            Text("Don't have account? signUp")
+                                .foregroundColor(.blue)
+                                .onTapGesture {
+                                    viewModel.navigateToSignUp = true
+                                }
                         }
                     }.padding(30)
                 }.frame(width: geo.size.width,height: geo.size.height*0.8,alignment: .top)

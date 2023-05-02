@@ -14,7 +14,7 @@ struct ContentView: View {
         GeometryReader { geo in
             NavigationView {
                 ZStack{
-                    NavigationLink( destination: ChatListView(),isActive: $viewModel.isAuthenticated){
+                    NavigationLink( destination: HomeView(),isActive: $viewModel.isAuthenticated){
                             EmptyView()
                         }
                     LoginView()
