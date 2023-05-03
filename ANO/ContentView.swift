@@ -17,6 +17,10 @@ struct ContentView: View {
                     NavigationLink( destination: HomeView(),isActive: $viewModel.isAuthenticated){
                             EmptyView()
                         }
+                    NavigationLink( destination: SignUpView()
+                        .navigationBarBackButtonHidden(true),isActive: $viewModel.navigateToSignUp){
+                            EmptyView()
+                        }
                     LoginView()
                         .frame(height: geo.size.height)
                 }
