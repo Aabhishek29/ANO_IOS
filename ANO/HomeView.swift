@@ -35,10 +35,10 @@ struct HomeView: View {
                             .tag(4)
                     }
                 }.frame(width: geo.size.width,height: geo.size.height)
-                .background(
-                    LinearGradient(gradient: Gradient(colors: [Color(uiColor: UIColor(hex: "#814dfaff") ?? .blue), Color(uiColor: UIColor(hex: "#4de0faff") ?? .blue)]), startPoint: .leading, endPoint: .trailing)
-                )
-            }
+                    .background(
+                        LinearGradient(gradient: Gradient(colors: [Color(uiColor: UIColor(hex: "#814dfaff") ?? .blue), Color(uiColor: UIColor(hex: "#4de0faff") ?? .blue)]), startPoint: .leading, endPoint: .trailing)
+                    )
+            }.navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

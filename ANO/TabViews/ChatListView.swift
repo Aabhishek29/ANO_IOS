@@ -60,7 +60,7 @@ struct ChatListView: View {
                     }
                 }.background(Color(uiColor: UIColor(hex: "#dce7faff") ?? .blue))
             }
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

@@ -24,7 +24,7 @@ struct ContentView: View {
                     LoginView()
                         .frame(height: geo.size.height)
                 }
-            }
+            }.navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }
