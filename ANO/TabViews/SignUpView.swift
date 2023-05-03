@@ -15,7 +15,6 @@ struct SignUpView: View {
     
     func signUpUser() {
         print("Lets signUp User")
-        viewModel.navigateToSignUp = false
     }
     
     var body: some View {
@@ -101,6 +100,13 @@ struct SignUpView: View {
                                     .cornerRadius(50)
                                     .shadow(radius: 15)
                             }.padding()
+                            
+                            Text("Already have an account?")
+                                .foregroundColor(.blue)
+                                .onTapGesture {
+                                    viewModel.navigateToSignUp = false
+                                }
+                            
                         }
                     }.padding(30)
                 }.frame(width: geo.size.width,height: geo.size.height*0.9,alignment: .top)

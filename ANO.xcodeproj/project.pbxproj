@@ -26,6 +26,7 @@
 		129BCDFA29FF9D5700C7377D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129BCDF929FF9D5700C7377D /* AppModel.swift */; };
 		12AFD1D329FFD08A00231DFD /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AFD1D229FFD08A00231DFD /* ChatListView.swift */; };
 		12AFD1D529FFE5FA00231DFD /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AFD1D429FFE5FA00231DFD /* ChatView.swift */; };
+		12D09AA92A02646C00C1392B /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D09AA82A02646C00C1392B /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		129BCDF929FF9D5700C7377D /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		12AFD1D229FFD08A00231DFD /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		12AFD1D429FFE5FA00231DFD /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		12D09AA82A02646C00C1392B /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				128864882A00FAF100C24657 /* StoryView.swift */,
 				1288648B2A00FD9900C24657 /* CallView.swift */,
 				1288648F2A0101E200C24657 /* SignUpView.swift */,
+				12D09AA82A02646C00C1392B /* CameraView.swift */,
 			);
 			path = TabViews;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				128864892A00FAF100C24657 /* StoryView.swift in Sources */,
+				12D09AA92A02646C00C1392B /* CameraView.swift in Sources */,
 				129BCDFA29FF9D5700C7377D /* AppModel.swift in Sources */,
 				129BCDC529FF900B00C7377D /* ViewController.swift in Sources */,
 				129BCDC129FF900B00C7377D /* AppDelegate.swift in Sources */,

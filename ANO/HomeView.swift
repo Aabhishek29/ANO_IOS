@@ -12,23 +12,27 @@ struct HomeView: View {
         GeometryReader { geo in
             NavigationView {
                 VStack{
-                    TabView {
-                        StoryView()
+                    TabView(selection: .constant(2)) {
+                        CameraView()
                             .tabItem {
                                 Label("Camera", systemImage: "camera")
                             }
+                            .tag(1)
                         ChatListView()
                             .tabItem {
                                 Label("Chats", systemImage: "ellipsis.message.fill")
                             }
+                            .tag(2)
                         StoryView()
                             .tabItem {
                                 Label("Story", systemImage: "person.3.fill")
                             }
-                        LoginView()
+                            .tag(3)
+                        CallView()
                             .tabItem {
                                 Label("Call", systemImage: "phone.fill")
                             }
+                            .tag(4)
                     }
                 }.frame(width: geo.size.width,height: geo.size.height)
                 .background(
