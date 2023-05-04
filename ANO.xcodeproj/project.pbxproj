@@ -27,6 +27,7 @@
 		12AFD1D329FFD08A00231DFD /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AFD1D229FFD08A00231DFD /* ChatListView.swift */; };
 		12AFD1D529FFE5FA00231DFD /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AFD1D429FFE5FA00231DFD /* ChatView.swift */; };
 		12D09AA92A02646C00C1392B /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D09AA82A02646C00C1392B /* CameraView.swift */; };
+		12DC3C252A037C6E0015203D /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DC3C242A037C6E0015203D /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		12AFD1D229FFD08A00231DFD /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		12AFD1D429FFE5FA00231DFD /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		12D09AA82A02646C00C1392B /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		12DC3C242A037C6E0015203D /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				129BCDF729FF94E800C7377D /* ColorCodeExtention.swift */,
+				12DC3C242A037C6E0015203D /* Toast.swift */,
 			);
 			path = extentions;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				129BCDC129FF900B00C7377D /* AppDelegate.swift in Sources */,
 				129BCDF129FF90CA00C7377D /* ContentView.swift in Sources */,
 				12AFD1D529FFE5FA00231DFD /* ChatView.swift in Sources */,
+				12DC3C252A037C6E0015203D /* Toast.swift in Sources */,
 				12AFD1D329FFD08A00231DFD /* ChatListView.swift in Sources */,
 				1288648C2A00FD9900C24657 /* CallView.swift in Sources */,
 				128864902A0101E200C24657 /* SignUpView.swift in Sources */,
@@ -510,6 +514,7 @@
 				DEVELOPMENT_TEAM = RTNM27LZH4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ANO/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Use for share photos with friends";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -539,6 +544,7 @@
 				DEVELOPMENT_TEAM = RTNM27LZH4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ANO/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Use for share photos with friends";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

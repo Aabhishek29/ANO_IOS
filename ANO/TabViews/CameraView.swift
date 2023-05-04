@@ -7,47 +7,18 @@
 
 import SwiftUI
 import UIKit
+import Foundation
 
 struct CameraView: View {
-    @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
-        @State private var selectedImage: UIImage?
-        @State private var isImagePickerDisplay = false
-        
-        var body: some View {
-            NavigationView {
-                VStack {
-                    
-                    if selectedImage != nil {
-                        Image(uiImage: selectedImage!)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .clipShape(Circle())
-                            .frame(width: 300, height: 300)
-                    } else {
-                        Image(systemName: "snow")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .clipShape(Circle())
-                            .frame(width: 300, height: 300)
-                    }
-                    
-                    Button("Camera") {
-                        self.sourceType = .camera
-                        self.isImagePickerDisplay.toggle()
-                    }.padding()
-                    
-                    Button("photo") {
-                        self.sourceType = .photoLibrary
-                        self.isImagePickerDisplay.toggle()
-                    }.padding()
-                }
-                .navigationBarTitle("Demo")
-                .sheet(isPresented: self.$isImagePickerDisplay) {
-                    ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
-                }
-                
-            }.navigationViewStyle(StackNavigationViewStyle())
-        }
+    @State private var showImagePicker: Bool = false
+    @State private var image: Image? = nil
+    @ObservedObject var viewModel = AppModel.shared
+
+    var body: some View {
+        VStack {
+            PhotoCaptureView(showImagePicker: self.$showImagePicker, image: self.$image)
+        }.toast(message: viewModel.toastMessage, isShowing: $showImagePicker, duration: Toast.short)
+    }
 }
 
 struct CameraView_Previews: PreviewProvider {
@@ -58,39 +29,74 @@ struct CameraView_Previews: PreviewProvider {
 
 
 
-struct ImagePickerView: UIViewControllerRepresentable {
-    func makeCoordinator() -> Coordinator {
-        return Coordinator(picker: self)
+
+
+class ImagePickerCoordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+
+    @Binding var isShown: Bool
+    @Binding var image: Image?
+
+    init(isShown: Binding<Bool>, image: Binding<Image?>) {
+        _isShown = isShown
+        _image = image
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+        let uiImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        image = Image(uiImage: uiImage)
+        isShown = false
     }
 
-
-    @Binding var selectedImage: UIImage?
-    @Environment(\.presentationMode) var isPresented
-    var sourceType: UIImagePickerController.SourceType
-
-    func makeUIViewController(context: Context) -> UIImagePickerController {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = self.sourceType
-        return imagePicker
-    }
-
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
-
-    }
-
-
-    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-        var picker: ImagePickerView
-
-        init(picker: ImagePickerView) {
-            self.picker = picker
-        }
-
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            guard let selectedImage = info[.originalImage] as? UIImage else { return }
-            self.picker.selectedImage = selectedImage
-            self.picker.isPresented.wrappedValue.dismiss()
-        }
-
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        isShown = false
     }
 }
+
+struct ImagePicker: UIViewControllerRepresentable {
+
+    @Binding var isShown: Bool
+    @Binding var image: Image?
+
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
+
+    }
+
+    func makeCoordinator() -> ImagePickerCoordinator {
+        return ImagePickerCoordinator(isShown: $isShown, image: $image)
+    }
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
+        let picker = UIImagePickerController()
+        let viewModel = AppModel.shared
+        picker.delegate = context.coordinator
+        if !UIImagePickerController.isSourceTypeAvailable(.camera){
+            viewModel.toastMessage = "unable to open camera"
+            picker.sourceType = .photoLibrary
+        } else {
+            viewModel.toastMessage = "opening camera"
+            picker.sourceType = .camera
+        }
+        return picker
+    }
+
+}
+
+
+struct PhotoCaptureView: View {
+
+    @Binding var showImagePicker: Bool
+    @Binding var image: Image?
+
+
+    var body: some View {
+        ImagePicker(isShown: $showImagePicker, image: $image)
+    }
+}
+
+#if DEBUG
+struct PhotoCaptureView_Previews: PreviewProvider {
+    static var previews: some View {
+        PhotoCaptureView(showImagePicker: .constant(false), image: .constant(Image("")))
+    }
+}
+#endif
