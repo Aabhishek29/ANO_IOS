@@ -28,9 +28,9 @@ struct HomeView: View {
                                 Label("Story", systemImage: "person.3.fill")
                             }
                             .tag(3)
-                        CallView()
+                        SettingView()
                             .tabItem {
-                                Label("Call", systemImage: "phone.fill")
+                                Label("Setting", systemImage: "gearshape.fill")
                             }
                             .tag(4)
                     }

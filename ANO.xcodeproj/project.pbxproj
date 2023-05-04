@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		128864892A00FAF100C24657 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128864882A00FAF100C24657 /* StoryView.swift */; };
-		1288648C2A00FD9900C24657 /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288648B2A00FD9900C24657 /* CallView.swift */; };
+		1288648C2A00FD9900C24657 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288648B2A00FD9900C24657 /* SettingView.swift */; };
 		1288648E2A00FDB400C24657 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288648D2A00FDB400C24657 /* HomeView.swift */; };
 		128864902A0101E200C24657 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288648F2A0101E200C24657 /* SignUpView.swift */; };
 		129BCDC129FF900B00C7377D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129BCDC029FF900B00C7377D /* AppDelegate.swift */; };
@@ -49,7 +49,7 @@
 
 /* Begin PBXFileReference section */
 		128864882A00FAF100C24657 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
-		1288648B2A00FD9900C24657 /* CallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
+		1288648B2A00FD9900C24657 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		1288648D2A00FDB400C24657 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1288648F2A0101E200C24657 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		128864912A01397100C24657 /* Users.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Users.geojson; sourceTree = "<group>"; };
@@ -107,8 +107,7 @@
 				1288648A2A00FB1300C24657 /* subComponents */,
 				12AFD1D229FFD08A00231DFD /* ChatListView.swift */,
 				128864882A00FAF100C24657 /* StoryView.swift */,
-				1288648B2A00FD9900C24657 /* CallView.swift */,
-				1288648F2A0101E200C24657 /* SignUpView.swift */,
+				1288648B2A00FD9900C24657 /* SettingView.swift */,
 				12D09AA82A02646C00C1392B /* CameraView.swift */,
 			);
 			path = TabViews;
@@ -155,6 +154,7 @@
 				129BCDCB29FF900C00C7377D /* LaunchScreen.storyboard */,
 				129BCDCE29FF900C00C7377D /* Info.plist */,
 				129BCDF029FF90CA00C7377D /* ContentView.swift */,
+				1288648F2A0101E200C24657 /* SignUpView.swift */,
 				129BCDF229FF93F200C7377D /* LoginView.swift */,
 				129BCDF929FF9D5700C7377D /* AppModel.swift */,
 				1288648D2A00FDB400C24657 /* HomeView.swift */,
@@ -329,7 +329,7 @@
 				12AFD1D529FFE5FA00231DFD /* ChatView.swift in Sources */,
 				12DC3C252A037C6E0015203D /* Toast.swift in Sources */,
 				12AFD1D329FFD08A00231DFD /* ChatListView.swift in Sources */,
-				1288648C2A00FD9900C24657 /* CallView.swift in Sources */,
+				1288648C2A00FD9900C24657 /* SettingView.swift in Sources */,
 				128864902A0101E200C24657 /* SignUpView.swift in Sources */,
 				129BCDF329FF93F200C7377D /* LoginView.swift in Sources */,
 				1288648E2A00FDB400C24657 /* HomeView.swift in Sources */,
