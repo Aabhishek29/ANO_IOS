@@ -3,5 +3,17 @@
 This is simple messanger application. like whatsapp, telegram, etc
 create by using Swift 5 
 
+here is SignUp screen
 
-![SIGNUP_ANO](https://user-images.githubusercontent.com/77404811/236195777-ee10538a-ab31-4a15-aa7e-023c3af8c7a8.png)
+![register](https://github.com/Aabhishek29/ANO_IOS/assets/77404811/372a5d8b-fc39-4c0b-9682-d48c69ce6750)
+
+here is Chatting screen
+
+![register](https://github.com/Aabhishek29/ANO_IOS/assets/77404811/06f733b0-d82c-4e55-92e7-0fc9d58a5b06)
+
+here is the profile screen
+
+![register](https://github.com/Aabhishek29/ANO_IOS/assets/77404811/645a5c91-6caa-4ed0-976e-76beed1c9ce2)
+
+
+this is currently under development
